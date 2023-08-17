@@ -1,19 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public int GG;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float moveSpeed = 5f; // Velocidade de movimento do jogador
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Obter entrada do teclado
+        float horizontalInput = Input.GetAxis("Vertical");
+        float hs = Input.GetAxis("Horizontal");
+
+        // Calcular a direção do movimento
+        Vector3 moveDirection = new Vector3(hs, horizontalInput, 0f);
+
+        // Calcular a nova posição do jogador
+        transform.position += moveDirection * moveSpeed * Time.deltaTime;
     }
 }

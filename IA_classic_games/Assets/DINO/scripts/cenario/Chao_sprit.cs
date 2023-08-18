@@ -6,7 +6,10 @@ using UnityEngine;
 public class Chao_sprit : MonoBehaviour
 {
     public Sprite[] spriteOptions;
-    private SpriteRenderer sprit;
+    public SpriteRenderer sprit;
+    
+    [SerializeField]
+    private int liso_reder;
 
     private void Start()
     {
@@ -17,10 +20,19 @@ public class Chao_sprit : MonoBehaviour
     private void troca_sprit()
     {
         
-        int indice_random = Random.Range(0, spriteOptions.Length);
-        sprit.sprite = spriteOptions[indice_random];
+        int indice_random = Random.Range(1, 101);
+
+        if (indice_random <= liso_reder) {
+            indice_random = Random.Range(0, 2);
+            sprit.sprite = spriteOptions[indice_random];
+        }
+        else{
+            indice_random = Random.Range(2, 4);
+            sprit.sprite = spriteOptions[indice_random];
+        }
+
         
-        
+
     }
 
     // Update is called once per frame

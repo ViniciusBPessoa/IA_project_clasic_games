@@ -17,12 +17,9 @@ public class Gerencia_Jogo : MonoBehaviour
     public float    aumentaDificuldade; 
     public double   dificuldade;
 
-    public int  morreu;
-
     // Start is called before the first frame update
     void Awake()
     {   
-        morreu = 0;
         geraForma();
     }
 
@@ -30,19 +27,17 @@ public class Gerencia_Jogo : MonoBehaviour
     void Update()
     {
 
-        if(morreu != 1){
-            temporizador += Time.deltaTime;
-            if(dificuldade > 0.9){
-                aumentaDificuldade += Time.deltaTime;
-            }
+        temporizador += Time.deltaTime;
+        if(dificuldade > 0.9){
+            aumentaDificuldade += Time.deltaTime;
         }
 
-        if(dificuldade > 0.9 && aumentaDificuldade > 10 && morreu != 1){
+        if(dificuldade > 0.9 && aumentaDificuldade > 10){
             dificuldade        -= 0.2;
             aumentaDificuldade  = 0;
         }
 
-        if(temporizador > dificuldade && morreu != 1){
+        if(temporizador > dificuldade){
             geraForma();
             temporizador = 0;
         } 

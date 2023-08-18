@@ -16,14 +16,8 @@ public class Gerencia_Forma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Gerencia_Jogo.GetComponent<Gerencia_Jogo>().morreu);
 
-        while(Gerencia_Jogo.GetComponent<Gerencia_Jogo>().morreu != 1){
-            move = 0;
-        }
-
-        if(Gerencia_Jogo.GetComponent<Gerencia_Jogo>().dificuldade > 10 
-                && Gerencia_Jogo.GetComponent<Gerencia_Jogo>().morreu != 1){
+        if(Gerencia_Jogo.GetComponent<Gerencia_Jogo>().dificuldade > 10){
             move += 1;
         }
 

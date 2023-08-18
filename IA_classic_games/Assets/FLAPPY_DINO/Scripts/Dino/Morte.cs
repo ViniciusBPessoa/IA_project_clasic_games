@@ -19,7 +19,6 @@ public class Morte : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Terreno")){
-            Gerencia_Jogo.GetComponent<Gerencia_Jogo>().morreu = 1;
         }
     }
 

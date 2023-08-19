@@ -8,7 +8,7 @@ public class Chao_andar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 3;
+        moveSpeed = 7;
     }
 
     // Update is called once per frame

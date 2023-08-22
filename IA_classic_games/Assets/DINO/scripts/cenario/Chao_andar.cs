@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Chao_andar : MonoBehaviour
@@ -8,7 +6,7 @@ public class Chao_andar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 3;
+        moveSpeed = 7;
     }
 
     // Update is called once per frame

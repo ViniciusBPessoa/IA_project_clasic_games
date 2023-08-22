@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spown_fluor : MonoBehaviour
@@ -11,8 +9,8 @@ public class Spown_fluor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pos_atual = this.transform.position;
-        pos_rotations = this.transform.rotation;
+        pos_atual = transform.position;
+        pos_rotations = transform.rotation;
         pos_atual.x -= gap;
         
     }

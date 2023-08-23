@@ -6,7 +6,7 @@ public class Chao_andar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 7;
+        moveSpeed = GameObject.FindGameObjectWithTag("GameController").GetComponent<MAP_Stats>().Map_velocidade;
 
         if(gameObject.tag == "Nuvem"){
             moveSpeed /= 2;

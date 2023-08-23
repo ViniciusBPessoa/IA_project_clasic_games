@@ -13,8 +13,8 @@ public class Cactus_spowner : MonoBehaviour
     private float intervalo = 1.5f; // Intervalo em segundos
     private float tempoPassado = 0f; // Variável para contar os segundos
 
-    private int pontuacao = 200;
-    private int pontuaacao_nescessaria = 200;
+    private float pontuacao;
+    private float pontuaacao_nescessaria = 100;
 
     public GameObject[] inimigos_cactos;
     public GameObject[] inimigos_pitero;
@@ -28,16 +28,20 @@ public class Cactus_spowner : MonoBehaviour
     public float modificação_altura_pitero_cabeca = 0.4f;
     public float modificação_altura_pitero_cabeca_mais = 0.4f;
 
+    public float max_intr = 1.6f;
+
     void Start()
     {
         taxa_passaro = 30;
         modificação_altura_pitero_cabeca = 0.3f;
         modificação_altura_pitero_cabeca_mais = 1f;
+        pontuacao = GameObject.FindGameObjectWithTag("GameController").GetComponent<MAP_Stats>().Map_pontuacao;
     }
 
     // Update is called once per frame
     void Update()
     {
+        pontuacao = GameObject.FindGameObjectWithTag("GameController").GetComponent<MAP_Stats>().Map_pontuacao;
         tempoPassado += Time.deltaTime; // Incrementar o contador de segundos
 
         if (tempoPassado >= intervalo)
@@ -58,7 +62,10 @@ public class Cactus_spowner : MonoBehaviour
                 Cria_cactu();
                 tempoPassado = 0f;
             }
-            
+
+            intervalo = Random.Range(0.7f, max_intr);   
+            max_intr -= 0.01f;      
+
         }
     
     }

@@ -31,10 +31,4 @@ public class Chao_sprit : MonoBehaviour
         
 
     }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        // Se você não precisa de nada no Update por enquanto, você pode removê-lo.
-    }
 }

@@ -91,8 +91,6 @@ public class Cactus_spowner : MonoBehaviour
             newposi = new Vector2(transform.position.x, transform.position.y + modificação_altura_pitero_cabeca_mais);
         }
 
-        Debug.Log(newposi);
-
         obj.transform.localScale = new Vector3(tamanho_pitero, tamanho_pitero, tamanho_pitero);
         Instantiate(obj, newposi, transform.rotation);
 

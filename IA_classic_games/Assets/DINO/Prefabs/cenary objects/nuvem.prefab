@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: 9dfe092d92306fc4faf9a8e7b0334b8b, type: 3}
       propertyPath: m_TagString
-      value: Dino_destroy
+      value: Nuvem
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 9dfe092d92306fc4faf9a8e7b0334b8b, type: 3}
       propertyPath: m_SortingOrder
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7d593f49a14e24b88fc74a7eadff95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 7
 --- !u!114 &8065456815248865592
 MonoBehaviour:
   m_ObjectHideFlags: 0

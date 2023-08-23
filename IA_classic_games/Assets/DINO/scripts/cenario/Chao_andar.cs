@@ -7,6 +7,10 @@ public class Chao_andar : MonoBehaviour
     void Start()
     {
         moveSpeed = 7;
+
+        if(gameObject.tag == "Nuvem"){
+            moveSpeed /= 2;
+        }
     }
 
     // Update is called once per frame

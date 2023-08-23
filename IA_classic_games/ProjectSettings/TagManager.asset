@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Dino_destroy
   - Nuvem
+  - DINOinimigo
   layers:
   - Default
   - TransparentFX

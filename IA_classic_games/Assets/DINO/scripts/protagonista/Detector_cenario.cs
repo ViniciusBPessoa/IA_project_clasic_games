@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Detector_cenario : MonoBehaviour
 {
+    private Controla_protago controlador;
 
+    void Start()
+    {
+        controlador = GetComponent<Controla_protago>();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Dino_destroy")){
-            Debug.Log("Bateu");
+        if (other.CompareTag("DINOinimigo"))
+        {
+            controlador.Morto_prot = true;
+            Time.timeScale = 0f; // Pausar o jogo
         }
     }
-
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4489f23845940d44d95c35ef59e7cf0e
+guid: 177fd9c6b63d1d14ca84eeaa8e3cda19
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: cacto_1_2
+  - name: cacto_4_3
     originalName: 
-    pivot: {x: 0.45000002, y: -0.61538464}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 20
-      height: 26
-    spriteID: 991f426e428659c4492cb73716955475
+      width: 26
+      height: 56
+    spriteID: 51cc07882ddf3d94b8150ce7ac083791
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,20 +142,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -847042235
-    name: cacto_1_2
+    guid: -846977127
+    name: cacto_4_3
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: cacto_1_2
+    - name: cacto_4_3
       frameIndex: 0
       cellRect:
-        x: 7
-        y: 16
-        width: 20
-        height: 26
-      spriteId: 991f426e428659c4492cb73716955475
+        x: 3
+        y: 0
+        width: 26
+        height: 56
+      spriteId: 51cc07882ddf3d94b8150ce7ac083791
     linkedCells: []
     parentIndex: -1
   platformSettings: []

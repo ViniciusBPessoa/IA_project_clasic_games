@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4169287726532263163}
-  - component: {fileID: 8426324948820665849}
+  - component: {fileID: 2136443570412226359}
   m_Layer: 0
   m_Name: Controla_jogo
-  m_TagString: Untagged
+  m_TagString: Cacto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8426324948820665849
+--- !u!114 &2136443570412226359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcbfab094d6245a4782931f831ced31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eixoX: 11
-  eixoYbaixo: 0
-  eixoYcima: 0
-  forma: {fileID: 3399467030621542655, guid: fe983ec4a5f3e1141ad7837fec30c91f, type: 3}
+  eixoX: -3
+  eixoY: 0
+  forma: {fileID: 2392860692225053376, guid: edab5617b09303d45a6236df3c27ea8f, type: 3}
+  dino: {fileID: 2570965075786598588, guid: 838ffa30c4e04ef4d989f4bbc56e386b, type: 3}
   temporizador: 0
   aumentaDificuldade: 0
   dificuldade: 1.5

@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Dino_destroy
   - Nuvem
+  - DINOinimigo
+  - Terreno
+  - Score
+  - Cacto
   layers:
   - Default
   - TransparentFX

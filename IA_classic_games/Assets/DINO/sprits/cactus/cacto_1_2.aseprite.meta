@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: cacto_1_2
     originalName: 
-    pivot: {x: 0.45000002, y: 0}
+    pivot: {x: 0.45000002, y: -0.61538464}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -152,7 +152,7 @@ ScriptedImporter:
       frameIndex: 0
       cellRect:
         x: 7
-        y: 0
+        y: 16
         width: 20
         height: 26
       spriteId: 991f426e428659c4492cb73716955475
@@ -161,4 +161,4 @@ ScriptedImporter:
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 32, y: 64}

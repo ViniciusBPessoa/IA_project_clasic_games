@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pular : MonoBehaviour
 {
-    public float jumpForce;
+    public  float       jumpForce;
     private Rigidbody2D rb;
+    public  Boolean     playerMorto = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,9 +19,14 @@ public class Pular : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") == true){
-            Jump();
+        if(playerMorto == false)
+        {
+            if (Input.GetButtonDown("Jump") == true)
+            {
+                Jump();
+            }
         }
+        
     }
 
     private void Jump()

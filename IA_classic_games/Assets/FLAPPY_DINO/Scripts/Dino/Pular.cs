@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pular : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class Pular : MonoBehaviour
     {
         if(playerMorto == false)
         {
-            if (Input.GetButtonDown("Jump") == true){
+            if (Input.GetButtonDown("Jump") == true)
+            {
                 Jump();
             }
         }

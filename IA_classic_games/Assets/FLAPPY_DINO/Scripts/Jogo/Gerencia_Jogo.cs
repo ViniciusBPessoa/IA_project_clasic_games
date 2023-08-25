@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gerencia_Jogo: MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Gerencia_Jogo: MonoBehaviour
     public float        temporizador;
     public float        aumentaDificuldade; 
     public double       dificuldade;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -40,11 +42,13 @@ public class Gerencia_Jogo: MonoBehaviour
 
             temporizador += Time.deltaTime;
 
-            if(temporizador > dificuldade){
+            if(temporizador > dificuldade)
+            {
                 geraForma();
                 temporizador = 0;
             }
         }
+
     }
 
     public void geraForma()

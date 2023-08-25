@@ -15,7 +15,6 @@ public class Detector_cenario : MonoBehaviour
         if (other.CompareTag("DINOinimigo"))
         {
             controlador.Morto_prot = true;
-            Time.timeScale = 0f; // Pausar o jogo
         }
     }
 }

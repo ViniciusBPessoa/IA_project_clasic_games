@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 908836616699149003}
   - component: {fileID: 930599694768007363}
+  - component: {fileID: 1827791483785431215}
   m_Layer: 0
   m_Name: fundo
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.061048605, z: 0, w: 0.99813485}
   m_LocalPosition: {x: -4.4, y: -0.34, z: 1.2e-14}
-  m_LocalScale: {x: 81.61123, y: 81.61123, z: 81.61123}
+  m_LocalScale: {x: 18.723078, y: 11.086073, z: 10.052659}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,3 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1827791483785431215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4433816844171327946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5dc7a0aa73a41042a34663a54801f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Map_velocidade: 0
+  Map_pontuacao: 0
+  passagem_velocidade: 0
+  obj: []
+  pontos_UI: {fileID: 0}

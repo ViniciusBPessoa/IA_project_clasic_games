@@ -6,25 +6,21 @@ public class Spown_fluor : MonoBehaviour
     private Vector2 pos_atual;
     private Quaternion pos_rotations;
     public float gap;
-    // Start is called before the first frame update
+    
+    GameObject posi_to_spown;
+
     void Start()
     {
-        pos_atual = transform.position;
         pos_rotations = transform.rotation;
-        pos_atual.x -= gap;
-        
+        gap = 0.2f;
+        posi_to_spown = GameObject.FindGameObjectWithTag("Spowner_cao");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    void OnTriggerExit2D(Collider2D other)
+    public void cria_chao()
     {
-        if (other.CompareTag("Dino_destroy")){
-            Instantiate(terra, pos_atual, pos_rotations);
-        }
+        Vector2 posi = new Vector2(posi_to_spown.transform.position.x - gap, posi_to_spown.transform.position.y);
+        Instantiate(terra, posi, pos_rotations);
+        
     }
 }

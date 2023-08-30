@@ -24,6 +24,7 @@ public class MAP_Stats : MonoBehaviour
     }
 
     private void Start() {
+        Time.timeScale = 1f;
         players = GameObject.FindGameObjectsWithTag("Player");
     }
 
@@ -38,7 +39,7 @@ public class MAP_Stats : MonoBehaviour
             passagem_velocidade += 0.1f;
             Map_velocidade += 0.001f;
 
-            GameObject[] nuvens = GameObject.FindGameObjectsWithTag("Nuvem");
+            GameObject[] nuvens = GameObject.FindGameObjectsWithTag("Respawn");
             GameObject[] dinoDestroy = GameObject.FindGameObjectsWithTag("Dino_destroy");
             GameObject[] dinoInimigo = GameObject.FindGameObjectsWithTag("DINOinimigo");
 

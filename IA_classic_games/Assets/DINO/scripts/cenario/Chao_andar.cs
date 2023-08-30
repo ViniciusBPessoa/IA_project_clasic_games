@@ -8,7 +8,7 @@ public class Chao_andar : MonoBehaviour
     {
         moveSpeed = GameObject.FindGameObjectWithTag("GameController").GetComponent<MAP_Stats>().Map_velocidade;
 
-        if(gameObject.tag == "Nuvem"){
+        if(gameObject.tag == "Respawn"){
             moveSpeed /= 2;
         }
     }

@@ -5,11 +5,11 @@ using UnityEngine;
 public class Verificador_chao : MonoBehaviour
 {
     
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.CompareTag("Player"))
+        if(other.gameObject.tag == "Player")
         {
-            other.GetComponent<Moviment_dino>().tocar_chao();
+            other.gameObject.GetComponent<Moviment_dino>().tocar_chao();
         }
     }
 

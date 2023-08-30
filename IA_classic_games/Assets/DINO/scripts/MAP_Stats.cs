@@ -59,6 +59,16 @@ public class MAP_Stats : MonoBehaviour
         }
 
         para_cena();
+
+
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            menu_morte.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        if(Input.GetKeyUp(KeyCode.Escape)){
+            menu_morte.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
 
     public bool Verifica_fim_cena(){

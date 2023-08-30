@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Chao_andar : MonoBehaviour
+public class nuvem_andar : MonoBehaviour
 {
     [HideInInspector]
     public float moveSpeed;
@@ -9,7 +9,7 @@ public class Chao_andar : MonoBehaviour
     {
         moveSpeed = GameObject.FindGameObjectWithTag("GameController").GetComponent<MAP_Stats>().Map_velocidade;
 
-        if(gameObject.tag == "Respawn"){
+        if(gameObject.tag == "Nuvem"){
             moveSpeed /= 2;
         }
     }

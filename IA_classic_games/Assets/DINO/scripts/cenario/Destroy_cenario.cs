@@ -19,7 +19,7 @@ public class Destroy_cenario : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if(other.gameObject.CompareTag("Respawn")){
+        if(other.gameObject.CompareTag("Nuvem")){
             Destroy(other.gameObject);
         }
     }

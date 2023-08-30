@@ -31,8 +31,12 @@ public class Moviment_dino : MonoBehaviour
             pulo();
         }
 
-        if(Input.GetKey(KeyCode.S) && isGrounded == false){
+        if(Input.GetKeyDown(KeyCode.S) && isGrounded == false){
             rb.gravityScale = peso * multiplicacao_peso;
+        }
+
+        if (Input.GetKeyUp(KeyCode.S)){
+            rb.gravityScale = 4;
         }
 
 

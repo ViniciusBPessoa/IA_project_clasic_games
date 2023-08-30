@@ -7,7 +7,7 @@ public class Spown_fluor : MonoBehaviour
     private Quaternion pos_rotations;
     public float gap;
     
-    GameObject posi_to_spown;
+    public GameObject posi_to_spown;
 
     void Start()
     {

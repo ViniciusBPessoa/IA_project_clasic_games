@@ -24,6 +24,12 @@ public class Destroy_cenario : MonoBehaviour
         if(other.gameObject.CompareTag("Nuvem")){
             Destroy(other.gameObject);
         }
+
+        if(other.gameObject.CompareTag("Player")){
+            other.GetComponent<Controla_protago>().velocidade = 0f;
+            other.GetComponent<Controla_protago>().volocidade_cenario = 0f;
+            other.GetComponent<Rigidbody2D>().simulated = false;
+        }
     }
     
 

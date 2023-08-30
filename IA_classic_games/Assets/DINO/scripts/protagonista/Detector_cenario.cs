@@ -15,6 +15,7 @@ public class Detector_cenario : MonoBehaviour
         if (other.CompareTag("DINOinimigo"))
         {
             controlador.Morto_prot = true;
+            this.GetComponent<BoxCollider2D>().isTrigger = true;
         }
     }
 }

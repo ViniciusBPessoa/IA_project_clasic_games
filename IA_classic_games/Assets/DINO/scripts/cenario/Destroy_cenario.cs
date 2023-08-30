@@ -4,8 +4,10 @@ public class Destroy_cenario : MonoBehaviour
 {
     Spown_fluor spowner;
 
+    public GameObject obj;
+
     private void Start() {
-        spowner = GameObject.FindGameObjectWithTag("EditorOnly").GetComponent<Spown_fluor>();
+        spowner = obj.GetComponent<Spown_fluor>();
     }
 
     public void OnTriggerEnter2D(Collider2D other)

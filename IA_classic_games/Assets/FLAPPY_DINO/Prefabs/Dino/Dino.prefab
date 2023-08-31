@@ -17,7 +17,8 @@ GameObject:
   - component: {fileID: 6450526424703446763}
   - component: {fileID: 5900190649353336422}
   - component: {fileID: 7948320920733396887}
-  m_Layer: 0
+  - component: {fileID: 4896604561902504966}
+  m_Layer: 3
   m_Name: Dino
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -113,7 +114,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -301,3 +302,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4896604561902504966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2570965075786598588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192158de32d920f47935b16653965193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 2702079896293653898, guid: 5506900206660f14a836ebf40eaaab7d, type: 3}

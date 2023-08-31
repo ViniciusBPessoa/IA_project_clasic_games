@@ -4,17 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Dino_destroy
-  - Nuvem
-  - DINOinimigo
   - Terreno
   - Score
   - Cacto
+  - EnableScore
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - IgnoreDino
   - Water
   - UI
   - 

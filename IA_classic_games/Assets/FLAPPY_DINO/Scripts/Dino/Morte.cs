@@ -13,20 +13,15 @@ public class Morte : MonoBehaviour
     {
         if(gameObject.transform.position.y < -12)
         {
-            Destroy(gameObject);
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            rb.simulated = false;
         }
         
         resetaCena();
 
     }
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Cacto")){
-            mataPlayer();
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.CompareTag("Terreno")){
+        if(other.gameObject.CompareTag("Cacto") || other.gameObject.CompareTag("Terreno")){
             mataPlayer();
         }
     }
@@ -73,7 +68,6 @@ public class Morte : MonoBehaviour
             }
         }
 
-        Debug.Log(alguemVivo);
         if(alguemVivo == false){
             terminaJogo();
         }
@@ -99,7 +93,7 @@ public class Morte : MonoBehaviour
         }
 
         if(todosMortos == true){
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(0);
         }
     }
 }

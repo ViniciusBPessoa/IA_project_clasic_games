@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Gerencia_Jogo: MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class Gerencia_Jogo: MonoBehaviour
     public  GameObject  forma;
     private GameObject  novaForma;
     public  GameObject  dino;
+    public  GameObject  menuJogo;
 
     public float        temporizador;
     public float        aumentaDificuldade; 
@@ -21,6 +21,7 @@ public class Gerencia_Jogo: MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {   
+        Time.timeScale = 1;
         geraForma();
     }
 
@@ -48,6 +49,10 @@ public class Gerencia_Jogo: MonoBehaviour
                 temporizador = 0;
             }
         }
+        else
+        {
+            menuJogo.GetComponent<Gerencia_Menu_Jogo>().abrirMenu();
+        }
 
     }
 
@@ -61,10 +66,27 @@ public class Gerencia_Jogo: MonoBehaviour
     
     public Boolean checaFim()
     {
-        if(dino.GetComponent<Morte>().fimJogo == true)
+        GameObject[] jogadores = FindObjectsOfType<GameObject>();
+        
+        Boolean alguemVivo = false;
+            
+        foreach (GameObject jog in jogadores)
+        {
+            if(jog.CompareTag("Player"))
+            {
+                if(jog.GetComponent<Pular>().playerMorto == false)
+                {
+                    alguemVivo = true;
+                    break;
+                }
+            }
+        }
+
+        if(alguemVivo == false)
         {
             return true;
         }
+
         return false;
     }
 

@@ -9,8 +9,17 @@ public class nuvem_andar : MonoBehaviour
     {
         moveSpeed = GameObject.FindGameObjectWithTag("GameController").GetComponent<MAP_Stats>().Map_velocidade;
 
-        if(gameObject.tag == "Nuvem"){
+        
+        int jesus = Random.Range(1, 11);
+
+        if(gameObject.tag == "Nuvem" && jesus <= 5){
             moveSpeed /= 2;
+        }
+        if(gameObject.tag == "Nuvem" && jesus <= 8){
+            moveSpeed /= 3;
+        }
+        if(gameObject.tag == "Nuvem" && jesus <= 10){
+            
         }
     }
 

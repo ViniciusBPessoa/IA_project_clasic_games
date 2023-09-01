@@ -29,7 +29,7 @@ public class Pular : MonoBehaviour
         
     }
 
-    private void Jump()
+    public void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }

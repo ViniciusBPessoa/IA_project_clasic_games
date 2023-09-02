@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 9208502644024083272}
   - component: {fileID: 3638392668242983920}
   - component: {fileID: 6138611999515553494}
+  - component: {fileID: 9157105523729335655}
   - component: {fileID: 6344747330171538136}
   m_Layer: 3
   m_Name: Dino_IA
@@ -330,6 +331,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197fd947bb5ca5e42a264c3948aae23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9157105523729335655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807265727849978061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3390045b7a08042886ba5bbd7803ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  melhorPlayer: 0
 --- !u!95 &6344747330171538136
 Animator:
   serializedVersion: 5

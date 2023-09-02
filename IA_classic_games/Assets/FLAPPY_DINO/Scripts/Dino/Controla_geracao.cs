@@ -12,16 +12,19 @@ public class Controla_geracao : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         if(melhorPlayer == true)
         {
-            for (int i = 0; i < 20; i++)
-            {
-                GameObject[] jogadores  = FindObjectsOfType<GameObject>();
+            GameObject[] jogadores  = FindObjectsOfType<GameObject>();
 
-                foreach (GameObject jog in jogadores)
+            if (jogadores.Length > 20){
+                for (int i = 0; i < jogadores.Length - 20; i++){
+                    Destroy(jogadores[0]);
+                }
+            }
+
+            foreach (GameObject jog in jogadores)
+            {
+                if(jog.CompareTag("Player") && jog != gameObject)
                 {
-                    if(jog.CompareTag("Player") && jog != gameObject)
-                    {
-                        //Aqui eu passaria as infos pra próxima geração
-                    }
+                    //Aqui eu passaria as infos pra próxima geração
                 }
             }
         }

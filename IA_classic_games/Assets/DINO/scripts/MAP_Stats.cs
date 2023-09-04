@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class MAP_Stats : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class MAP_Stats : MonoBehaviour
     }
 
     private void Start() {
+        GameObject.FindGameObjectWithTag("GG").GetComponent<Reinicializador_IA>().inicializa();
         Time.timeScale = 1f;
         GameObject[] playersWithTagPlayer = GameObject.FindGameObjectsWithTag("Player");
         GameObject[] playersWithTagIAPlay = GameObject.FindGameObjectsWithTag("IA_Play");
@@ -101,6 +103,8 @@ public class MAP_Stats : MonoBehaviour
 
         if(verifica == false){
             menu_morte.SetActive(true);
+            GameObject.FindGameObjectWithTag("GG").GetComponent<Reinicializador_IA>().finaliza();
+            SceneManager.LoadScene("Treinar_dino");
             Time.timeScale = 0f;
         }
 

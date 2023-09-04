@@ -6,7 +6,7 @@ public class Cactus_spowner : MonoBehaviour
 {
     public int percentual;
     public float taxa_passaro;
-    public int taxa_pitero_voador = 50;
+    public int taxa_pitero_voador = 20;
 
     private int porcentagem_total = 101;
 
@@ -90,13 +90,7 @@ public class Cactus_spowner : MonoBehaviour
         percentual = Random.Range(0, porcentagem_total);
 
         Vector2 newposi;
-
-        if(percentual <= taxa_pitero_voador){
-            newposi = new Vector2(transform.position.x, transform.position.y - modificação_altura_pitero_cabeca);
-        }else{
-            newposi = new Vector2(transform.position.x, transform.position.y + modificação_altura_pitero_cabeca_mais);
-        }
-
+        newposi = new Vector2(transform.position.x, transform.position.y + modificação_altura_pitero_cabeca_mais);
         obj.transform.localScale = new Vector3(tamanho_pitero, tamanho_pitero, tamanho_pitero);
         Instantiate(obj, newposi, transform.rotation);
 

@@ -21,12 +21,16 @@ public class IA_protagonistas : MonoBehaviour
     public float ultima_pos_y = 1;
     public Animator animator;
     public bool inicio = false;
+
+
+    public bool pula_;
+    public bool agacha_;
     void Start()
     {
         Minha_mente = new Rede_neural(numero_camadas, numero_neoronios_camada, numero_entradas, numero_saidas, amplitude_recalibragem);
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
-        amplitude_recalibragem = 0.1f;
+        amplitude_recalibragem = 0.01f;
     }
 
     private void Update() {
@@ -38,7 +42,7 @@ public class IA_protagonistas : MonoBehaviour
             float dist_cao = Math.Abs(gameObject.transform.position.y - -5.13544f);
             float velocidade = GameObject.FindGameObjectWithTag("GameController").GetComponent<MAP_Stats>().Map_velocidade;
             float dist_cao_inimi = Math.Abs(obj.transform.position.y - -5.13544f);
-            float dist_vc_inimi = Math.Abs(gameObject.transform.position.y - obj.transform.position.y);
+            float dist_vc_inimi = Math.Abs(gameObject.transform.position.x - obj.transform.position.x);
             float tamanho_inimigo =  GetObjectWidth(obj);
             lista_inputs = new List<float>
             {
@@ -64,20 +68,9 @@ public class IA_protagonistas : MonoBehaviour
                 ultima_pos_y = GameObject.FindGameObjectWithTag("GameController").GetComponent<MAP_Stats>().Map_pontuacao;
             }
 
-            if (activate[1]){
-                animator.SetBool("down", true);
-            }else if (activate[1] == false){
-                animator.SetBool("down", false);
-            }
+            pula_ = activate[0];
+            agacha_ = activate[1];
 
-            if (isGrounded == false){
-            animator.SetBool("pula", true);
-            }else if(isGrounded == true) {
-                animator.SetBool("pula", false);
-            }
-            if (is_alive == true){
-                animator.SetBool("morto", true);
-            }
         }
 
         

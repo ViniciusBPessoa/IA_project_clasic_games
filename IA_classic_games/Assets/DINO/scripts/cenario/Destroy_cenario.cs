@@ -33,6 +33,9 @@ public class Destroy_cenario : MonoBehaviour
             other.GetComponent<Controla_protago>().volocidade_cenario = 0f;
             other.GetComponent<Rigidbody2D>().simulated = false;
         }
+        if(other.gameObject.CompareTag("IA_Play")){
+            other.GetComponent<IA_protagonistas>().is_alive = true;
+        }
     }
     
 

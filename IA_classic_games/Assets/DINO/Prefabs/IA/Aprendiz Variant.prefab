@@ -93,7 +93,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7984663646556965287, guid: 85d4ce4b758a4c443b93976faeb7ea33, type: 3}
-      insertIndex: -1
+      insertIndex: 1
       addedObject: {fileID: -1437012855180263092}
     - targetCorrespondingSourceObject: {fileID: 7984663646556965287, guid: 85d4ce4b758a4c443b93976faeb7ea33, type: 3}
       insertIndex: -1
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64244e28d557e1c4093a10ccf0d6ab29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numero_camadas: 1
+  numero_camadas: 2
   numero_neoronios_camada: 6
   numero_entradas: 5
   numero_saidas: 2
@@ -133,6 +133,8 @@ MonoBehaviour:
   ultima_pos_y: 0
   animator: {fileID: 0}
   inicio: 0
+  pula_: 0
+  agacha_: 0
 --- !u!114 &5013713923969755303
 MonoBehaviour:
   m_ObjectHideFlags: 0

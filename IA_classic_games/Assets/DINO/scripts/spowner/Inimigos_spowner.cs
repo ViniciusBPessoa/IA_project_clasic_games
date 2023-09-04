@@ -64,7 +64,6 @@ public class Cactus_spowner : MonoBehaviour
             }
 
             intervalo = Random.Range(0.7f, max_intr);   
-            max_intr -= 0.01f;      
 
         }
     

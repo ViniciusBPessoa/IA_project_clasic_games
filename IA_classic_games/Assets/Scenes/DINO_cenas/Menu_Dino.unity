@@ -652,6 +652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cena_jogo_solo: Game_dino
+  cena_jogo_treino: Treinar_dino
 --- !u!4 &980280438
 Transform:
   m_ObjectHideFlags: 0
@@ -883,7 +884,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1353182689}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 980280437}
+        m_TargetAssemblyTypeName: Controlador_menu_principal, Assembly-CSharp
+        m_MethodName: Treinar_IAL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1353182689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,7 +1017,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1356276106}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 980280437}
+        m_TargetAssemblyTypeName: Controlador_menu_principal, Assembly-CSharp
+        m_MethodName: Treinar_IAL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1356276106
 MonoBehaviour:
   m_ObjectHideFlags: 0

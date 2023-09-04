@@ -11,6 +11,9 @@ public class Verificador_chao : MonoBehaviour
         {
             other.gameObject.GetComponent<Moviment_dino>().tocar_chao();
         }
+        if(other.gameObject.tag == "IA_Play")
+        {
+            other.gameObject.GetComponent<IA_protagonistas>().tocar_chao();
+        }
     }
-
 }

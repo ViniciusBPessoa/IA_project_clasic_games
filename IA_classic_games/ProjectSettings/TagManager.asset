@@ -8,6 +8,7 @@ TagManager:
   - Nuvem
   - DINOinimigo
   - Spowner_cao
+  - IA_Play
   layers:
   - Default
   - TransparentFX

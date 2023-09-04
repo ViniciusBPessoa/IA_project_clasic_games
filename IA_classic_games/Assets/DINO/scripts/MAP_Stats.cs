@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class MAP_Stats : MonoBehaviour
 {
@@ -25,7 +26,11 @@ public class MAP_Stats : MonoBehaviour
 
     private void Start() {
         Time.timeScale = 1f;
-        players = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] playersWithTagPlayer = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] playersWithTagIAPlay = GameObject.FindGameObjectsWithTag("IA_Play");
+
+        // Combina as duas listas
+        players = playersWithTagPlayer.Concat(playersWithTagIAPlay).ToArray();
     }
 
     void Update()
@@ -75,9 +80,18 @@ public class MAP_Stats : MonoBehaviour
         bool verificador = false;
         foreach (GameObject item in players)
         {
-            if (item.GetComponent<Controla_protago>().Morto_prot == false){
-                verificador = true;
+            if (item.tag == "IA_Play"){
+                if (item.GetComponent<IA_protagonistas>().is_alive == false)
+                {
+                    verificador = true;
+                }
+            }else{
+                if (item.GetComponent<Controla_protago>().Morto_prot == false)
+                {
+                    verificador = true;
+                }
             }
+            
         }
         return verificador;
     }

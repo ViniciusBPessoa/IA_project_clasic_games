@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DINO_cenas/Game_dino.unity
     guid: 0b66351b6ed863f408eb0e9f467157a7
+  - enabled: 1
+    path: Assets/Scenes/DINO_cenas/Treinar_dino.unity
+    guid: da4c654e26f12954f9b680264e354861
   m_configObjects: {}

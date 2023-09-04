@@ -28,6 +28,7 @@ public class Controla_protago : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.S)){
+            Debug.Log(Input.GetKey(KeyCode.S));
             animator.SetBool("down", true);
         }else{
             animator.SetBool("down", false);

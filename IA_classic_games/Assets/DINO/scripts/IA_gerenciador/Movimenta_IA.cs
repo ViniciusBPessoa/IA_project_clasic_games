@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Moviment_dino : MonoBehaviour
+public class Movimenta_IA : MonoBehaviour
 {
     public float jumpForce;
     private Rigidbody2D rb;
@@ -12,7 +12,8 @@ public class Moviment_dino : MonoBehaviour
 
     private float peso;
     private float multiplicacao_peso;
-
+    public bool is_SS;
+    public bool is_spacee;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,19 +28,12 @@ public class Moviment_dino : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetButtonDown("Jump") && isGrounded){
+    }
+
+    public void controldaro(bool is_SS){
+        if(is_SS && isGrounded){
             pulo();
         }
-
-        if(Input.GetKeyDown(KeyCode.S) && isGrounded == false){
-            rb.gravityScale = 30;
-        }
-
-        if (Input.GetKeyUp(KeyCode.S)){
-            rb.gravityScale = 4;
-        }
-
-
     }
 
     void pulo(){
@@ -52,5 +46,4 @@ public class Moviment_dino : MonoBehaviour
         isGrounded = true;
         rb.gravityScale = peso;
     }
-
 }

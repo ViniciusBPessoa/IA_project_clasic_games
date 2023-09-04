@@ -16,6 +16,11 @@ public class Spown_fluor : MonoBehaviour
         posi_to_spown = GameObject.FindGameObjectWithTag("Spowner_cao");
     }
 
+    void Update()
+    {
+        gap += 0.001f;
+    }
+
 
     public void cria_chao()
     {

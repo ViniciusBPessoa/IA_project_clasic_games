@@ -9,6 +9,8 @@ TagManager:
   - DINOinimigo
   - Spowner_cao
   - IA_Play
+  - GG
+  - Initial
   layers:
   - Default
   - TransparentFX

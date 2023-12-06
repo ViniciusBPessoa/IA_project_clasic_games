@@ -626,7 +626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 600227551}
-  - component: {fileID: 600227550}
+  - component: {fileID: 600227552}
   m_Layer: 0
   m_Name: Controla_Geracoes
   m_TagString: Untagged
@@ -634,19 +634,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &600227550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600227549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3390045b7a08042886ba5bbd7803ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  melhorPlayer: 0
 --- !u!4 &600227551
 Transform:
   m_ObjectHideFlags: 0
@@ -662,6 +649,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &600227552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600227549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5030f6d0126ebcd4db9e38e464c21566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gerencia_Jogo: {fileID: 614516504}
+  bird: {fileID: 1415287954}
+  firstGeneration: 1
+  x: -4.45
+  y: -1.42
+  n: 10
 --- !u!1 &614516504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,6 +1113,11 @@ MonoBehaviour:
   reiniciar: {fileID: 574449220}
   voltarMenu: {fileID: 1146456209}
   gerencia_Jogo: {fileID: 614516504}
+--- !u!1 &1415287954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4807265727849978061, guid: 5a796f412232e1941b9a181a22ccbee1, type: 3}
+  m_PrefabInstance: {fileID: 6205983509471313166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1764486734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1530,8 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 571817436}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9157105523729335655, guid: 5a796f412232e1941b9a181a22ccbee1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

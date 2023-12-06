@@ -4,96 +4,72 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Morte : MonoBehaviour
+public class Morte : MonoBehaviour 
 {
-    public Boolean fimJogo;
-
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(gameObject.transform.position.y < -12)
         {
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             rb.simulated = false;
         }
-        
-        resetaCena();
-
     }
+
+    // Checa colisão do player com cacto ou terreno, se sim, mata o jogador
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Cacto") || other.gameObject.CompareTag("Terreno")){
             mataPlayer();
         }
     }
 
-    public void terminaJogo()
+    // Função responsável por terminar o jogo com jogador todos jogadores mortos
+    private void endGame()
     {
-        GameObject[] objetosEmJogo = FindObjectsOfType<GameObject>();
-        foreach (GameObject obj in objetosEmJogo)
+        GameObject[] gameObjectsInScreen = FindObjectsOfType<GameObject>();
+        foreach (GameObject obj in gameObjectsInScreen)
         {
             if(obj.GetComponent<Gerencia_Forma>() != null)
             {
                 obj.GetComponent<Gerencia_Forma>().move = 0;
             }
         }
-        fimJogo = true;
     }
 
-    public void mataPlayer()
+    private void mataPlayer()
     {
         gameObject.GetComponent<Pular>().playerMorto = true;
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(rb.velocity.x, 8);
+        rb.velocity    = new Vector2(rb.velocity.x, 8);
 
+        // Desabilita colisão dos jogadores mortos
         BoxCollider2D[] colisores = GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D col in colisores)
         {
             col.enabled = false;
         }
 
-        GameObject[] jogadores = FindObjectsOfType<GameObject>();
+        GameObject[] gameObjectsInScreen = FindObjectsOfType<GameObject>();
         
-        Boolean alguemVivo = false;
-            
-        foreach (GameObject jog in jogadores)
+        // Checa se ainda há jogador vivo
+        Boolean somePlayerAlive = false;
+        foreach (GameObject obj in gameObjectsInScreen)
         {
-            if(jog.CompareTag("Player"))
+            if(obj.CompareTag("Player"))
             {
-                if(jog.GetComponent<Pular>().playerMorto == false)
+                if(obj.GetComponent<Pular>().playerMorto == false)
                 {
-                    alguemVivo = true;
+                    somePlayerAlive = true;
                     break;
                 }
             }
         }
 
-        if(alguemVivo == false){
-            terminaJogo();
-        }
-        
-    }
-
-    void resetaCena()
-    {
-        GameObject[] jogadores = FindObjectsOfType<GameObject>();
-        
-        Boolean todosMortos = true;
-            
-        foreach (GameObject jog in jogadores)
-        {
-            if(jog.CompareTag("Player"))
-            {
-                if(jog.transform.position.y > -12)
-                {
-                    todosMortos = false;
-                    break;
-                }
-            }
-        }
-
-        if(todosMortos == true){
-            //SceneManager.LoadScene(0);
+        // Termina jogo se todos jogadores mortos
+        if(somePlayerAlive == false){
+            endGame();
         }
     }
+    
 }

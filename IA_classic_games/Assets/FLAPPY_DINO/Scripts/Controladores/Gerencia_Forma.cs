@@ -7,7 +7,6 @@ public class Gerencia_Forma : MonoBehaviour
 {
     public int move = 6;
     public int eixoDestruir;
-    // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()

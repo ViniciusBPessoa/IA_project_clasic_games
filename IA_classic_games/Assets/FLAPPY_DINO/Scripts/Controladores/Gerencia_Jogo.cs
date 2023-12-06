@@ -12,16 +12,17 @@ public class Gerencia_Jogo: MonoBehaviour
     private GameObject  novaForma;
     public  GameObject  dino;
     public  GameObject  menuJogo;
-    public  GameObject melhorPlayer;
+    public  GameObject  melhorPlayer;
     public float        temporizador;
     public float        aumentaDificuldade; 
     public double       dificuldade;
+    public bool         isPaused;
 
 
     // Start is called before the first frame update
     void Awake()
     {   
-        //DontDestroyOnLoad(this.gameObject);
+        isPaused = false;
         Time.timeScale = 1;
         geraForma();
     }
@@ -34,6 +35,20 @@ public class Gerencia_Jogo: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape) == true && isPaused == false)
+            {
+                Debug.Log("Menu Aberto");
+                menuJogo.GetComponent<Gerencia_Menu_Jogo>().abrirMenu();
+                isPaused = true;
+            }
+        else if (Input.GetKeyDown(KeyCode.Escape) == true && isPaused == true)
+        {
+            Debug.Log("Menu Fechado");
+            menuJogo.GetComponent<Gerencia_Menu_Jogo>().fecharMenu();
+            isPaused = false;
+        }
+
+
         if(checaFim() == false)
         {
             if(dificuldade > 0.9)
@@ -69,9 +84,6 @@ public class Gerencia_Jogo: MonoBehaviour
                     melhorPlayer = jog;
                 }
             }
-            
-            Debug.Log("Melhor jogador: " + melhorPlayer.name);
-            melhorPlayer.GetComponent<Controla_geracao>().melhorPlayer = true;
             menuJogo.GetComponent<Gerencia_Menu_Jogo>().abrirMenu();
         }
     }

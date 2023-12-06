@@ -9,6 +9,7 @@ public class Gerencia_Menu_Jogo : MonoBehaviour
 
     [SerializeField] private Button reiniciar;
     [SerializeField] private Button voltarMenu;
+    public  GameObject  gerencia_Jogo;
 
     // Start is called before the first frame update
     void Awake()
@@ -17,14 +18,22 @@ public class Gerencia_Menu_Jogo : MonoBehaviour
         voltarMenu.onClick.AddListener(onVoltarMenu);
     }
 
+    void Update()
+    {
+        
+    }
+
     public void abrirMenu()
     {
         Time.timeScale = 0;
         gameObject.SetActive(true);
+
     }
     public void fecharMenu()
     {
+        Time.timeScale = 1;
         gameObject.SetActive(false);
+        gerencia_Jogo.GetComponent<Gerencia_Jogo>().isPaused = false;
     }
 
     // Update is called once per frame

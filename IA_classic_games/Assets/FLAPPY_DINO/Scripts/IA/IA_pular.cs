@@ -9,12 +9,12 @@ public class IA_pulo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Boolean realizaAcao = gameObject.GetComponent<IA_protagonistas>().acao;
-        Debug.Log(realizaAcao);
-        if (realizaAcao == true && gameObject.GetComponent<Pular>().playerMorto == false)
-        {
-            Jump();
-        }
+        // Boolean realizaAcao = gameObject.GetComponent<IA_protagonistas>().acao;
+        // Debug.Log(realizaAcao);
+        // if (realizaAcao == true && gameObject.GetComponent<Pular>().playerMorto == false)
+        // {
+        //     Jump();
+        // }
     }
 
     private void Jump()

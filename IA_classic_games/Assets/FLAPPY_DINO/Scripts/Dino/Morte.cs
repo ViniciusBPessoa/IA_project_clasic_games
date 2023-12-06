@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Morte : MonoBehaviour 
 {
+    public bool is_alive = true;
     // Update is called once per frame
     private void Update()
     {
@@ -38,6 +39,7 @@ public class Morte : MonoBehaviour
 
     private void mataPlayer()
     {
+        is_alive = false;
         gameObject.GetComponent<Pular>().playerMorto = true;
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();

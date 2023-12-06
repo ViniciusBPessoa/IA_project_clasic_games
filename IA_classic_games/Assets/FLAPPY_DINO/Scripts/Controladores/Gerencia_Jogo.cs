@@ -116,6 +116,8 @@ public class Gerencia_Jogo: MonoBehaviour
 
         if(alguemVivo == false)
         {
+            Debug.Log("Filho da puta");
+            GameObject.FindGameObjectWithTag("Controla_Geracoes").GetComponent<Generations>().fim_episode();
             return true;
         }
 

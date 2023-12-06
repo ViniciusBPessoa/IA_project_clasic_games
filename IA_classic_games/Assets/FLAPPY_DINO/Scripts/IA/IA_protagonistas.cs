@@ -15,6 +15,7 @@ public class IA_protagonistas : MonoBehaviour
     }
     private void Update() 
     {
+        bool morto = GetComponent<Morte>().is_alive;
         List<float> test = new List<float>();
         
         GameObject nextScore     = closestScore();
@@ -26,7 +27,7 @@ public class IA_protagonistas : MonoBehaviour
         double[] actions = nw.Predict(inputs);
 
         // realize actions();
-        if (actions[0] == 1){
+        if (actions[0] == 1 && morto == true){
             gameObject.GetComponent<Pular>().Jump();
         }
     }

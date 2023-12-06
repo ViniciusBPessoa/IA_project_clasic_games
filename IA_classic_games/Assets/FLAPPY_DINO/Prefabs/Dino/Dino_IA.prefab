@@ -18,9 +18,8 @@ GameObject:
   - component: {fileID: 4747149432298095383}
   - component: {fileID: 9208502644024083272}
   - component: {fileID: 3638392668242983920}
-  - component: {fileID: 6138611999515553494}
-  - component: {fileID: 9157105523729335655}
   - component: {fileID: 6344747330171538136}
+  - component: {fileID: 3603991431685166880}
   m_Layer: 3
   m_Name: Dino_IA
   m_TagString: Player
@@ -83,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -6920739939123129775, guid: 0e17b4f2d15806f44b2fa7f6f30e4b60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -283,7 +282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ca4e99d68894d44a87f0c2985df2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fimJogo: 0
 --- !u!114 &9208502644024083272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 2702079896293653898, guid: 5506900206660f14a836ebf40eaaab7d, type: 3}
 --- !u!114 &3638392668242983920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,40 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d86de08204666e4f91c0c7137b9b216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numero_camadas: 3
-  numero_neoronios_camada: 4
-  numero_entradas: 3
-  numero_saidas: 1
-  amplitude_recalibragem: 10
-  acao: 0
-  Minha_mente:
-    amplitude_recalibragem: 0
-    camadas: []
---- !u!114 &6138611999515553494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4807265727849978061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 197fd947bb5ca5e42a264c3948aae23e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &9157105523729335655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4807265727849978061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3390045b7a08042886ba5bbd7803ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  melhorPlayer: 0
+  nw: {fileID: 0}
 --- !u!95 &6344747330171538136
 Animator:
   serializedVersion: 5
@@ -365,3 +330,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3603991431685166880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807265727849978061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845ef63acb73e264bb596680204ada8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputSize: 3
+  outputSize: 1
+  layerSizes: 0500000005000000
+  learningRate: 0.01

@@ -34,7 +34,7 @@ public class NeuralNetwork : MonoBehaviour
         InitializeWeightsAndBiases();
     }
 
-    private void InitializeWeightsAndBiases()
+    public void InitializeWeightsAndBiases()
     {
         int totalLayers = layerSizes.Length + 1;
         weights = new double[totalLayers][];

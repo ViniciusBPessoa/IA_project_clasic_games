@@ -643,7 +643,7 @@ Transform:
   m_GameObject: {fileID: 600227549}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.09, y: -0.04, z: -9.94036}
+  m_LocalPosition: {x: -4.45, y: -1.42, z: -9.94036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -663,10 +663,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gerencia_Jogo: {fileID: 614516504}
   bird: {fileID: 1415287954}
-  firstGeneration: 1
+  newBird: {fileID: 0}
   x: -4.45
   y: -1.42
   n: 10
+  m: 2
+  birdList: []
 --- !u!1 &614516504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputSize: 3
   outputSize: 1
-  layerSizes: 030000000300000003000000
+  layerSizes: 0500000005000000
   learningRate: 0.01
 --- !u!1 &1764486734
 GameObject:
@@ -1487,6 +1489,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3638392668242983920, guid: 5a796f412232e1941b9a181a22ccbee1, type: 3}
+      propertyPath: nw
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638392668242983920, guid: 5a796f412232e1941b9a181a22ccbee1, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -1548,6 +1554,7 @@ PrefabInstance:
       objectReference: {fileID: 571817436}
     m_RemovedComponents:
     - {fileID: 9157105523729335655, guid: 5a796f412232e1941b9a181a22ccbee1, type: 3}
+    - {fileID: 6138611999515553494, guid: 5a796f412232e1941b9a181a22ccbee1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

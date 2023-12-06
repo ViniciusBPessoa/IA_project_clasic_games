@@ -8,6 +8,7 @@ TagManager:
   - Score
   - Cacto
   - EnableScore
+  - Controla_Geracoes
   layers:
   - Default
   - TransparentFX

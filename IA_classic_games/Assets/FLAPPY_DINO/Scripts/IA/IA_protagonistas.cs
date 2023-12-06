@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class IA_protagonistas : MonoBehaviour
 {
-    [SerializeField] private NeuralNetwork nw;
+    [SerializeField] public NeuralNetwork nw;
     // Start is called before the first frame update
     void Start()
     {
-        NeuralNetwork nw = this.gameObject.GetComponent<NeuralNetwork>();
+        // Inicia rede neural e starta os pesos e o bias
+        nw = this.gameObject.GetComponent<NeuralNetwork>();
+        nw.InitializeWeightsAndBiases();
     }
     private void Update() 
     {

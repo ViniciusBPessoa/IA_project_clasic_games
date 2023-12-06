@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.SceneManagement;
 
 public class Generations : MonoBehaviour
 {
@@ -11,43 +9,42 @@ public class Generations : MonoBehaviour
     public int quantidade_selecao;
     private EvolutionaryStrategy ES;
     
-    // Variável estática para verificar se a cena foi carregada pela primeira vez
-    private static bool firstLoad = true;
-
     private void Awake() 
     {
-        DontDestroyOnLoad(this.gameObject);
+
     }
     
     void Start()
     {   
+        ES = new EvolutionaryStrategy(quantidade_selecao);
         // Verifica se é o primeiro carregamento da cena
-        if (firstLoad)
+        // Obtém a instância do GameManager
+        GameManager gameManager = GameManager.Instance;
+
+        // Obtém o valor atual da variável
+        int valorAtual = gameManager.ObterMinhaVariavel();
+
+        List<GameObject> listaPassaro = gameManager.ObterMinhalista();
+
+        // Atualiza o valor da variável (por exemplo, adicionando 1)
+        gameManager.AtualizarMinhaVariavel(valorAtual + 1);
+
+        if (valorAtual == 0)
         {
             inicializate_one_time();
-            firstLoad = false;
+        }else{
+            inicializate_second_time(listaPassaro);
         }
-        else
-        {
-            inicializate_second_time();
-        }
+
     }
 
     public void inicializate_one_time()
     {
-        
         spowner_objects(quantidade_geracao);
-        ES = new EvolutionaryStrategy(quantidade_selecao);
-        Debug.Log("uma");
-
     }
-
-    public void inicializate_second_time()
+    public void inicializate_second_time(List<GameObject> listaPassaro)
     {
-        
-        Debug.Log("duas");
-        spowner_object_list(ES.atualGeneration);
-
+        spowner_object_list(listaPassaro);
     }
 
     public void spowner_objects(int quantidade)
@@ -73,7 +70,11 @@ public class Generations : MonoBehaviour
     {
         List<GameObject> lista_passaros = GameObject.FindGameObjectsWithTag("Player").ToList();
         ES.generationCreator(lista_passaros);
-        SceneManager.LoadScene(0);
+
+        GameManager gameManager = GameManager.Instance;
+
+        // Obtém o valor atual da variável
+        gameManager.AtualizarMinhalista(ES.atualGeneration);
     }
     public class EvolutionaryStrategy
     {
@@ -103,6 +104,7 @@ public class Generations : MonoBehaviour
             {
                 atualGeneration.Add(selectedEntities[aux]);
                 aux++;
+                
                 if (aux >= selectedEntities.Count)
                 {
                     aux = 0;

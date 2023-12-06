@@ -53,7 +53,7 @@ public class Algoritimo_evolucionario : MonoBehaviour
 
                 if (reseted)
                 {
-                    atualGeneration[aux].GetComponent<IA_protragonistas>.neuralNetwork.Train();
+                    // atualGeneration[aux].GetComponent<IA_protragonistas>.neuralNetwork.Train();
                 }
 
             }

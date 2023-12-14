@@ -10,6 +10,7 @@ public class Reinicializador_IA : MonoBehaviour
 
     public Rede_neural rede_Neural_melor;
     Rede_neural AUX_IA_MELHOR;
+    public int total_seclec;
 
     public int geracao = 0;
 private void Awake() {
